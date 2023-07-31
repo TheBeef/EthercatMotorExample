@@ -1,15 +1,15 @@
 # EthercatMotorExample
 This is an example of controlling an EtherCat motor using the soem Raspberry PI library.
 
-I worked on EtherCat motors for a time at a company I worked for.  They were trying to use the SOEM library and
-a Respberry PI 4 to control the motor.  In the end they abandoned the project.  I have taken what I have figured
+I worked on EtherCat motors for a time for a company.  They were trying to use the SOEM library and
+a Respberry PI 4 to control a motor.  In the end they abandoned the project, I have taken what I have figured
 out and made this example of controlling an EtherCat motor.
-
-The motor is controlled using profile position mode (where you tell the motor to goto a position and it does it with
-being synchronized with any other motor or from the control).
 
 I couldn't find an example of controlling a motor using EtherCat out on the net, so I put this together.
 Maybe this will be helpful for someone else (maybe not).
+
+The motor is controlled using profile position mode (where you tell the motor to goto a position and it does it without
+being synchronized with any other motor or from the control).
 
 This is only a basic example and has only been tested on 1 motor (that had design problems so there could be
 problems with this example).
@@ -26,7 +26,7 @@ library for details (https://github.com/thanhtam-h/soem-w5500-rpi).
 
 ## Step by Step instructions
 
-This assumes you have already connected the motor as the first (and only) EtherCat device, connected the W5500 chip, have
+This assumes you have already connected the motor as the first (and only) EtherCat device, connected the W5500 chip, and have
 your Raspberry PI 4 ready to go.
 
 ### SD card
@@ -40,14 +40,12 @@ We start by making a standard RPI SD card and then changing it for our needs.
  * Put the SD card in the RPI and boot (make sure the RPI can access the internet)
  * Login to RPI
 
-#### Update to the latest OS files
+#### Update to the latest OS files and try on SPI
  * "sudo apt update"
  * "sudo apt dist-upgrade"
  * add "dtparam=spi=on" to your /boot/config.txt (echo "dtparam=spi=on" >>/boot/config.txt as root)
- * reboot
 
 #### Change the kernel to one that will work with SOEM and the W5500 chip
- * Login to RPI
  * "cd ~"
  * "git clone https://github.com/thanhtam-h/rpi4-xeno3.git"
  * "cd rpi4-xeno3/prebuilt"
@@ -60,7 +58,7 @@ We start by making a standard RPI SD card and then changing it for our needs.
  * "cd /usr/src/linux-headers-4.19.86-v7l-ipipe"
  * "sudo make -i modules_prepare"
 
-** There WILL be errors, don't worry about it :) **
+**There WILL be errors, don't worry about it :)**
 
  * Add "dwc_otg.fiq_enable=0 dwc_otg.fiq_fsm_enable=0 dwc_otg.nak_holdoff=0" to the end of /boot/cmdline.txt
  * Add "isolcpus=0,1 xenomai.supported_cpus=0x3" to the end of /boot/cmdline.txt
