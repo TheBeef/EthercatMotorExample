@@ -1,8 +1,8 @@
 # EthercatMotorExample
 This is an example of controlling an EtherCat motor using the soem Raspberry PI library.
 
-I worked on EtherCat motors for a time for a company.  They were trying to use the SOEM library and
-a Respberry PI 4 to control a motor.  In the end they abandoned the project, I have taken what I have figured
+I worked on EtherCat motors for a time at a company.  They were trying to use the SOEM library and
+a Respberry PI 4 to control a motor.  In the end they abandoned the project.  I have taken what I have figured
 out and made this example of controlling an EtherCat motor.
 
 I couldn't find an example of controlling a motor using EtherCat out on the net, so I put this together.
@@ -11,23 +11,23 @@ Maybe this will be helpful for someone else (maybe not).
 The motor is controlled using profile position mode (where you tell the motor to goto a position and it does it without
 being synchronized with any other motor or from the control).
 
-This is only a basic example and has only been tested on 1 motor (that had design problems so there could be
-problems with this example).
+This is only a basic example and has only been tested on 1 motor (the motor had design problems making it hard to figure things
+out on, so there could be problems with this example as well).
 
 ## What you need
 You need to have a Raspberry PI 4 with a SPI W5500 connected up to it and an EtherCat motor.
 
 See http://www.simplerobot.net for examples of how to connect up the W5500 and use the SOEM library.
 
-This will only go into using this example and assume you have correctly connected the hardware and go the SOEM library working.
+I will only go into using this example and assume you have correctly connected the hardware and go the SOEM library working.
 
 I have included some instructions for SOEM-W5500-rpi just to make things easier, but you should look at the SOEM
 library for details (https://github.com/thanhtam-h/soem-w5500-rpi).
 
 ## Step by Step instructions
 
-This assumes you have already connected the motor as the first (and only) EtherCat device, connected the W5500 chip, and have
-your Raspberry PI 4 ready to go.
+I assume you have already connected the motor as the first (and only) EtherCat device, connected the W5500 chip, and have
+your Raspberry PI 4 ready to go (and that it has access to the internet).
 
 ### SD card
 
@@ -37,7 +37,7 @@ We start by making a standard RPI SD card and then changing it for our needs.
  * Enabled SSH (setting your login and password)
  * Select the Raspberry PI OS 32-bit (must be 32-bit)
  * Make the SD card
- * Put the SD card in the RPI and boot (make sure the RPI can access the internet)
+ * Put the SD card in the RPI and boot
  * Login to RPI
 
 #### Update to the latest OS files and try on SPI

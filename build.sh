@@ -1,0 +1,2 @@
+gcc -fasynchronous-unwind-tables -I./soem-w5500-rpi/soem -I./soem-w5500-rpi/osal -I./soem-w5500-rpi/oshw -O3 -Wall -g -o main main.c -Wl,--no-as-needed -Wl,@/usr/xenomai/lib/modechk.wrappers -lalchemy -lcopperplate /usr/xenomai/lib/xenomai/bootstrap.o -Wl,--wrap=main -Wl,--dynamic-list=/usr/xenomai/lib/dynlist.ld -L/usr/xenomai/lib -lcobalt -L./soem-w5500-rpi/lib -lmodechk -lpthread -lrt -lsoem -losal -loshw -lwiznet_drv
+
