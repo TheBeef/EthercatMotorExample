@@ -19,7 +19,7 @@ You need to have a Raspberry PI 4 with a SPI W5500 connected up to it and an Eth
 
 See http://www.simplerobot.net for examples of how to connect up the W5500 and use the SOEM library.
 
-I will only go into using this example and assume you have correctly connected the hardware and go the SOEM library working.
+I will only go into using this example and assume you have correctly connected the hardware and got the SOEM library working.
 
 I have included some instructions for SOEM-W5500-rpi just to make things easier, but you should look at the SOEM
 library for details (https://github.com/thanhtam-h/soem-w5500-rpi).
