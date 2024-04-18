@@ -522,7 +522,7 @@ void GotoPos(int pos)
     SOEM_Write32(0x6083,0x00,0x96);    // Set profile acceleration
     SOEM_Write32(0x6084,0x00,0x96);    // Set profile deceleration
 
-    SOEM_Write32(0x6081,0x00,0x0200);    // Set provile velocity
+    SOEM_Write32(0x6081,0x00,0x0200);    // Set profile velocity
     SOEM_Write32(0x607A,0x00,REVOLUTION_PULSES/360*pos);           // Set target
 
     SOEM_Write16(0x6040,0x00,0x000F);    // Mask control word to "enable"
