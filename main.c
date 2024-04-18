@@ -11,10 +11,6 @@
  * COPYRIGHT:
  *    Copyright 2023 Paul Hutchinson.
  *
- *    This software is the property of Paul Hutchinson and may not be
- *    reused in any manner except under express written permission of
- *    Paul Hutchinson.
- *
  * CREATED BY:
  *    Paul Hutchinson (31 Jul 2023)
  *
